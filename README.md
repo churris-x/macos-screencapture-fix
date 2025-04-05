@@ -20,7 +20,7 @@ and then check that you have some entries in the `screencapturelog.txt` file
 ## Debugging
 There are several moving parts in this process that could cause the launch agent to fail.
 
-- Ensure the script has execute permission, if not `chmod +x sc`
+- Ensure the script has execute permission, if not `chmod +x screencapturefix.sh`
 - Check the `plist` is correct by running `plutil com.fran.screencapturefix.plist`, should return `OK`
 - Check the last status of the agent by running `launctl list | grep screencapturefix`, `0` is a success
 - Run the script from the terminal using `sh screencapturefix.sh`
