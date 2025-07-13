@@ -4,6 +4,11 @@ Temporary fix for weird bug that keeps reverting the `show thumbnail` option on 
 
 The main idea is to create a LaunchAgent that watches the `Preferences/com.apple.screencapture.plist` file, and forces the thumbnail option to stay false.
 
+Before installing check if manually disabling the screencapture agent solves the problem by itself:
+```bash
+launchctl disable gui/501/com.apple.screencaptureui.agent
+```
+
 As always, use at your own risk and check any code you are running before doing so.
 
 ## Install
